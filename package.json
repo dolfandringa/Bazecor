@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "fwVersion": "1.0.9beta",
   "license": "GPL-3.0-only",
+  "main": "src/main/index.js",
   "author": {
     "name": "Dygma Lab S.L.",
     "email": "contact@dygma.com"
@@ -24,6 +25,7 @@
     "build:windows": "yarn compile && electron-builder -w",
     "build:win": "yarn run build:windows",
     "build:linux": "yarn compile && electron-builder -l",
+    "package:win32": "electron-packager ./ --platform=win32",
     "prettier": "prettier --write \"src/**/*.{js,json,css,scss,md}\"",
     "lint:all": "npm-run-all lint:js lint:css",
     "lint:js": "eslint src/**/*.js",
@@ -87,6 +89,7 @@
     "drivelist": "^11.1.0",
     "easy-crc": "^1.1.0",
     "electron-devtools-installer": "^3.1.1",
+    "electron-packager": "^17.1.1",
     "electron-store": "^8.1.0",
     "electron-updater": "^4.3.8",
     "electron-window-state": "^5.0.3",
